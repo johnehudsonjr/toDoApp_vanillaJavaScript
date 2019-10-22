@@ -1,20 +1,32 @@
+const sprintOne = ['JavaScript Practice', 'React Practice', 'Update Resume', 'Update Portfolio', 'Job Applications']
+
+
 // Create an Array with five to dos
 // You have x todos
 // Print first and second to last
 
-const sprintOne = ['JavaScript Practice', 'React Practice', 'Update Resume', 'Update Portfolio', 'Job Applications']
-
-
 // Determines How Many index positions are in array
-
-console.log(sprintOne.length)
-
-console.log(` You have ${sprintOne.length} things on your to do list.`)
+    // console.log(sprintOne.length)
+    // console.log(` You have ${sprintOne.length} things on your to do list.`)
 
 // Print First Indexed Item
-
-
-console.log(sprintOne[0])
+    // console.log(sprintOne[0])
 
 //  Print Second from last 
-console.log(sprintOne[sprintOne.length -2])
+    // console.log(sprintOne[sprintOne.length -2])
+
+// DELETE THE THIRD ITEM
+// ADD A NEW ITEM ON THE END
+// REMOVE THE FIRST ITEM FROM LIST
+
+// Third item deleted
+    sprintOne.splice(2,1)
+    console.log(sprintOne)
+
+// Add new item on end 
+    sprintOne.push("keep working hard! Almost employed.")
+console.log (sprintOne)
+
+// remove 1st item
+    sprintOne.shift()
+    console.log(sprintOne)
