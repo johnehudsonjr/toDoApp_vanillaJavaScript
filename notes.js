@@ -25,8 +25,16 @@ const notes = ['Note 1', 'Note 2', 'Note 3']
 // Index to start at when removing and the second argument is the amount of items you want to remove. THE THIRD argument is what you want to replace it with.
     // notes.splice(1, 1, "this is the new second item")
     // Bracket notation
-notes[2] = "this is the new note 3"
-console.log(notes)
+    // notes[2] = "this is the new note 3"
 
+// LOOPING OVER ARRAY
 
+// When you pass a function into a function. It is called a callback function.
+    // notes.forEach(function(item, index){
+    //     console.log(index)
+    //     console.log(item)
+
+    // })
+
+    // console.log(notes)
 

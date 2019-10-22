@@ -20,13 +20,22 @@ const sprintOne = ['JavaScript Practice', 'React Practice', 'Update Resume', 'Up
 // REMOVE THE FIRST ITEM FROM LIST
 
 // Third item deleted
-    sprintOne.splice(2,1)
-    console.log(sprintOne)
+    // sprintOne.splice(2,1)
+    // console.log(sprintOne)
 
 // Add new item on end 
-    sprintOne.push("keep working hard! Almost employed.")
-console.log (sprintOne)
+    // sprintOne.push("keep working hard! Almost employed.")
+    // console.log (sprintOne)
 
 // remove 1st item
-    sprintOne.shift()
-    console.log(sprintOne)
+    // sprintOne.shift()
+    // console.log(sprintOne)
+
+// 1. The first item
+// 2. The second item
+
+console.log(`You have ${sprintOne.length} items left in Sprint One.`)
+
+sprintOne.forEach(function(element, index){
+    console.log(`Item ${index + 1}: ${element}`)
+})
