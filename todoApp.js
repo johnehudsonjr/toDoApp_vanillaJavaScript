@@ -36,6 +36,13 @@ const sprintOne = ['JavaScript Practice', 'React Practice', 'Update Resume', 'Up
 
 console.log(`You have ${sprintOne.length} items left in Sprint One.`)
 
-sprintOne.forEach(function(element, index){
-    console.log(`Item ${index + 1}: ${element}`)
-})
+// sprintOne.forEach(function(element, index){
+//     console.log(`Item ${index + 1}: ${element}`)
+// })
+
+
+for (let count = 0; count <= sprintOne.length -1 ; count++){
+    const num = count +1
+    console.log(`${num}: ${sprintOne[count]}`)
+}
+
