@@ -37,7 +37,22 @@ const deleteSprint = function(sprintOne, sprintTitle){
    
 }
 
-const deletedSprint = deleteSprint(sprintOne, 'rEaCt Practice')
-
+// const deletedSprint = deleteSprint(sprintOne, 'rEaCt Practice')
 // console.log(deletedSprint)
-console.log(sprintOne)
+
+// FILTERING ARRAY
+
+// Use filter that shows completed value of false
+
+const sprintFilter = sprintOne.filter(function(sprint, index){
+    const isCompleted = sprint.completed
+
+    if (isCompleted === true){
+        console.log(isCompleted)
+       return sprint
+
+    }
+})
+
+
+console.log(sprintFilter)

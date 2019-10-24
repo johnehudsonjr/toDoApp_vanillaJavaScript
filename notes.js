@@ -97,20 +97,6 @@ const notes = [{
 
 // console.log('A' < 'a')
 
-const sortNotes = function (notes){
-    notes.sort(function(a, b){
-        if (a.title.toLowerCase() < b.title.toLowerCase()){
-            return -1
-        }
-
-        else if (b.title.toLowerCase() < a.title.toLowerCase()){
-             return 1
-        }
-        else {
-            return 0
-        }
-    })
-}
 
 const findNote = function (notes, noteTitle) {
     // findIndex returns the index of first element that satisfies the provided testing function
@@ -124,6 +110,18 @@ const findNote = function (notes, noteTitle) {
   
    
 }
+
+// FILTER ARRAY
+const findNotes = function(notes, query){
+    
+    return notes.filter(function (note, index) {
+        const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
+        const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
+        return isTitleMatch || isBodyMatch
+})
+}
+
+console.log(findNotes(notes, 'eat'))
 
 // // We call the function and pass in what we are searching for
 // const note = findNote(notes, 'Office modification')
@@ -145,5 +143,5 @@ const findNote = function (notes, noteTitle) {
 
 // console.log(note)
 
-sortNotes(notes)
-console.log(notes)
+// sortNotes(notes)
+// console.log(notes)
