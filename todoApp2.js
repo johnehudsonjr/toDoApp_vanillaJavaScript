@@ -1,7 +1,7 @@
 
 const sprintOne = [{
     text: 'JavaScript Practice',
-    completed: false
+    completed: falsegit
 }, {
     text: 'React Practice',
     completed: true
@@ -36,23 +36,26 @@ const deleteSprint = function(sprintOne, sprintTitle){
   
    
 }
-
-// const deletedSprint = deleteSprint(sprintOne, 'rEaCt Practice')
-// console.log(deletedSprint)
+console.log(deleteSprint(sprintOne, 'Job applications'))
+console.log(deleteSprint(sprintOne, 'Job applications'))
+// const deleteSprint = deleteSprint(sprintOne, 'rEaCt Practice')
+// console.log(deleteSprint)
 
 // FILTERING ARRAY
 
 // Use filter that shows completed value of false
-
-const sprintFilter = sprintOne.filter(function(sprint, index){
-    const isCompleted = sprint.completed
-
-    if (isCompleted === true){
-        console.log(isCompleted)
-       return sprint
-
-    }
-})
+const sprintFilter = function(sprintOne) {
+    return sprintOne.filter(function (sprint) {
+        return sprint.completed === true
 
 
-console.log(sprintFilter)
+    })
+
+}
+
+
+
+console.log(sprintFilter(sprintOne))
+
+console.log(sprintOne)
+
