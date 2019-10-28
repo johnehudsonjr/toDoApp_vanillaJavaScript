@@ -2,19 +2,40 @@
 const account = {
     name: 'John',
     expenses:[],
+    income: [],
     addExpense: function(description, amount){
         this.expenses.push({
             description: description,
             amount: amount
         })
     },
-    getAccountSummary: function(){
-        let totalExpenses = 0
+   
+    addIncome: function(description, income){
+       
+        this.income.push({
+            description:description,
+            amount: income
+        })
 
+    },
+
+    getAccountSummary: function(){
+        let totalIncome = 0
+        let totalExpenses = 0
+        let accountBalance = 0
+
+
+        this.income.forEach(function(income){
+            totalIncome = totalIncome + income.amount
+        })
+        
         this.expenses.forEach(function(expense){
             totalExpenses = totalExpenses + expense.amount
         })
-        return `${this.name} has $${totalExpenses} in expenses.`
+
+        accountBalance = totalIncome - totalExpenses
+
+        return `${this.name} has an account balance of $${accountBalance}. $${totalExpenses} in expenses and $${totalIncome}.`
     }
 }
 
@@ -30,6 +51,7 @@ const account = {
 
     account.addExpense('Rent', 950)
     account.addExpense('coffee', 2)
+    account.addIncome('job', 10000)
     
 
     console.log(account.getAccountSummary())
@@ -39,3 +61,9 @@ const account = {
         // When adding an object to an array... the function will take in the arguments and you format them via object property:value notation as needed
         // description: argumentName,
         // amount: argumentAmount,
+
+
+// ad Income array to account
+//  Add Income method => description, amount
+// Tweak getAccountSummary
+// Andrew Mead has a balance of $10. 100 in in income and 90 in expense
