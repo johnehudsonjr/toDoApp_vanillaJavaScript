@@ -61,13 +61,9 @@ const sortSprints = function(sprintOne) {
               return 1
         }
         else {
-
+            return 0
         }
     })
-
-
-// sortSprints(sprintOne)
-
-
-
-// console.log(sprintFilter(sprintOne))
+}
+sortSprints(sprintOne)
+console.log(sprintOne)
