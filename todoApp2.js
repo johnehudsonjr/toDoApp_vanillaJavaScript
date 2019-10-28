@@ -1,7 +1,6 @@
-
 const sprintOne = [{
     text: 'JavaScript Practice',
-    completed: falsegit
+    completed: false
 }, {
     text: 'React Practice',
     completed: true
@@ -36,8 +35,8 @@ const deleteSprint = function(sprintOne, sprintTitle){
   
    
 }
-console.log(deleteSprint(sprintOne, 'Job applications'))
-console.log(deleteSprint(sprintOne, 'Job applications'))
+// console.log(deleteSprint(sprintOne, 'Job applications'))
+// console.log(deleteSprint(sprintOne, 'Job applications'))
 // const deleteSprint = deleteSprint(sprintOne, 'rEaCt Practice')
 // console.log(deleteSprint)
 
@@ -53,9 +52,22 @@ const sprintFilter = function(sprintOne) {
 
 }
 
+const sortSprints = function(sprintOne) {
+    sprintOne.sort(function(a, b){
+        if (!a.completed && b.completed){
+            return -1
+        }
+        else if (!b.completed && a.completed) {
+              return 1
+        }
+        else {
+
+        }
+    })
 
 
-console.log(sprintFilter(sprintOne))
+// sortSprints(sprintOne)
 
-console.log(sprintOne)
 
+
+// console.log(sprintFilter(sprintOne))

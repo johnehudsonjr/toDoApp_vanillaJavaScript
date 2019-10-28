@@ -121,8 +121,24 @@ const findNotes = function(notes, query){
 })
 }
 
-console.log(findNotes(notes, 'eat'))
+// console.log(findNotes(notes, 'eat'))
 
+// SORT ARRAY USING .sort()
+
+const sortNotes = function(notes) {
+    notes.sort(function(a, b){
+        if(a.title.toLowerCase() < b.title.toLowerCase()){
+            return -1
+        }
+        else if (b.title.toLowerCase() < a.title.toLowerCase() ) {
+
+        }
+        else {
+            return 0
+        }
+
+    })
+}
 // // We call the function and pass in what we are searching for
 // const note = findNote(notes, 'Office modification')
 //     console.log(note)
@@ -144,4 +160,9 @@ console.log(findNotes(notes, 'eat'))
 // console.log(note)
 
 // sortNotes(notes)
+
+
+
+console.log(todos)
+console.log(notes)
 // console.log(notes)
